@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity"
+    tools:ignore="ExtraText">
 
 
     <TextView
@@ -22,6 +23,19 @@
 
         />
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tasksList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnFlutuante"
+        app:layout_constraintTop_toBottomOf="@+id/titleTitle"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="8"
+        tools:listitem="@layout/item_task"
+        tools:ignore="UnknownId" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
        android:id="@+id/btnFlutuante"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,8 +44,8 @@
         app:srcCompat="@drawable/ic_add_24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="Botao para criacao de nova tarefa" />
 
 
-        />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
